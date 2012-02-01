@@ -1,0 +1,40 @@
+#banner {
+			display:block;
+			position:absolute;
+			text-align:center;
+			width:650px;
+			height:450px;
+	}
+	
+#gOver {
+			display:block;
+			position:absolute;
+			width:650px;
+			text-align:center;
+			height:450px;
+			background:rgba(255, 255, 0, 0.5);
+			display:none;
+}
+
+#play_btn {
+			display:block;
+			background-image: url("play.jpg");
+			position:absolute; 
+			text-align:center; 
+			width:60px; 
+			height:40px; 
+			top:250px; 
+			left:500px;
+			display:show
+}
+#ins_btn {
+			display:block;
+			background-image: url("ins.jpg");
+			position:absolute; 
+			text-align:center; 
+			width:100px; 
+			height:30px; 
+			top:300px; 
+			left:500px;
+			display:show
+}

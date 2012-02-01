@@ -9,11 +9,12 @@
   <script type="text/javascript" src="lowerPaddle.js"></script>
   <script type = "text/javascript" src="collision.js"></script>
   <script type="text/javascript" src="my-1.js"></script>
+  <link rel="stylesheet" href="style.css"/>
 	
   <script type="text/javascript">
   function play()
   {
-	alert("Play Button");	
+	//alert("Play Button");	
 	document.getElementById('play_btn').style.display = "none"
 	document.getElementById('ins_btn').style.display = "none"
 	document.getElementById('banner').style.display = "none"
@@ -34,19 +35,21 @@
 		   		<canvas id="sankar" width="650" height="450" style="position:absolute; z-index:-1">
 				This text will Display if Browser not support HTML5 canvas
 				</canvas>
-				<div id="gOver" style="display:block; position:absolute; width:650px; text-align:center; height:450px; background:rgba(255, 255, 0, 0.5); display:none">
+				<div id="gOver">
 				<h1>GAME OVER</h1>
 				</div>
 		   </div>
 		   
-		   <div id="banner" style="display:block; position:absolute; text-align:center; width:650px; height:450px;">
+		   <div id="banner">
 			    <h1>Ping Pong</h1>
 		   </div>
-		   
 			<div id="buttons"> 
-			<input type="button" id="play_btn" onclick="play()" style="display:block; background-image: url(play.jpg); position:absolute; text-align:center; width:60px; height:40px; top:250px; left:500px; display:show" />
-			<input type="button" id="ins_btn" onclick="ins()" style="display:block; background-image: url(ins.jpg); position:absolute; text-align:center; width:100px; height:30px; top:300px; left:500px; display:show"/>	
+				<input type="button" id="play_btn" onclick="play()"/>
+				<input type="button" id="ins_btn" onclick="ins()"/>	
 			</div>
-  </section>
+			<div id="bottomHud">
+				<input type="label" id="score" value="0"/>
+			</div>	
+	</section>
   </body>
 </html>
