@@ -31,22 +31,14 @@
 				   {
 					  if(evt.keyCode==37&& lp.x> 0)
 					  {
-						lp.update(-15);
-						up.update(-15);
+						lp.update(-20);
+						up.update(-20);
 					  }
-					 /* else if(evt.keyCode==38)
-					  {
-					   	y--;
-					  }*/
 					else if(evt.keyCode==39 && lp.x<450)
 					  {
-						lp.update(+15);
-						up.update(+15);
+						lp.update(+20);
+						up.update(+20);
 					  }
-					/*  else if(evt.keyCode==40)
-					  {
-					   	y++;	   
-					  }	*/
 				   }
 				   //----------------------------------
 				   
