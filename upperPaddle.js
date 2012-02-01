@@ -5,6 +5,7 @@ upperPaddle = function (ctx)
 	this.x=0;
 	this.y=0;
 	
+	
 	var movement;
 	
 	ctx.fillStyle="red";

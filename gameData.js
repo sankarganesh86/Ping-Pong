@@ -8,4 +8,5 @@ var dy=5;
 var x=0;
 var y=0;
 
+var startMove="null";
 var firstHit="false";

@@ -19,8 +19,9 @@
 						hitTest=new collision(up,lp,playBall);
 						
 						//console.log(up);
-						//$('#sankar').keydown(downs);
+						
 						window.addEventListener('keydown',downs,true);//------used to add KeyBoard Event--------
+						window.addEventListener('keyup',ups,true);//---Used for key Up function------
 						setInt=setInterval(draw,24);
 				   }
 				   //---------------------------------------
@@ -31,16 +32,22 @@
 				   {
 					  if(evt.keyCode==37&& lp.x> 0)
 					  {
-						lp.update(-20);
-						up.update(-20);
+						startMove="left";
 					  }
 					else if(evt.keyCode==39 && lp.x<450)
 					  {
-						lp.update(+20);
-						up.update(+20);
+						startMove="right";
 					  }
 				   }
 				   //----------------------------------
+				   
+				   
+				   //--------Key Up Function-------------
+				   function ups(evt)
+				   {
+					   startMove="null";
+				   }
+				   //------------------------------------
 				   
 				   
 				   //----------Function Used to Draw a Circle---------
@@ -86,7 +93,17 @@
 						hitTest.checkCollision();
 						//-------------------------------------
 						
-					
+						if(startMove=="left"&&lp.x> 0)
+						{
+							lp.update(-15);
+							up.update(-15);	
+						}
+						else if(startMove=="right"&&lp.x<450)
+						{
+							lp.update(+15);
+							up.update(+15);	
+						}
+						
 				   }
 				   
 				   
