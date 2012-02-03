@@ -84,7 +84,6 @@
 						//---------------------
 						
 						
-						
 						//----------For Ball Movement----------
 						ctx.fillText("xaxis:"+playBall.y, 100, 100);
 						up.draw(ctx,0);
