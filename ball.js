@@ -7,11 +7,7 @@ ball=function(ctx)
 	var dx=5;
 	var dy=5;
 	
-	ctx.beginPath();
-	ctx.arc(this.x,this.y,this.r,0,Math.PI*2,true);
-	ctx.fill();
-	ctx.closePath();	
-	
+	var ballObj= new Image();
 	this.draw=function (ctx)
 	{
 		if( this.x<0 || this.x>650)
@@ -34,10 +30,14 @@ ball=function(ctx)
 			this.y=dy+this.y;
 		}
 		//console.log("this is x val:"+dx);
+		ballObj.src="ball.jpg";
+		ctx.drawImage(ballObj,this.x,this.y-16);
+		/*ctx.fillStyle="red";
+		ctx.strokeStyle="black";
 		ctx.beginPath();
 		ctx.arc(this.x,this.y,this.r,0,Math.PI*2,true);
 		ctx.fill();
-		ctx.closePath();
+		ctx.closePath();*/
 	}
 	
 	this.ballCovertion=function(pos,side)

@@ -76,7 +76,8 @@
 				   //------Function Used to call circle and rect function-----------
 				   function draw()
 				   {
-						
+						ctx.clearRect(0,0,650,450);
+					   
 						//---Base Rectangle----
 						ctx.fillStyle="white";
 						ctx.strokeStyle="black";

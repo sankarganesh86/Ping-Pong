@@ -4,7 +4,7 @@ upperPaddle = function (ctx)
 	this.width=200;
 	this.x=0;
 	this.y=0;
-	
+	var upperImage = new Image();
 	
 	var movement;
 	
@@ -19,8 +19,10 @@ upperPaddle = function (ctx)
 	
 	this.draw=function(ctx,movement)
 	{
+		upperImage.src = "paddle.jpg";
+		ctx.drawImage(upperImage, this.x, this.y);
 		
-		ctx.fillText("xaxis:"+movement, 100, 100);
+		/*ctx.fillText("xaxis:"+movement, 100, 100);
 		
 		ctx.fillStyle="red";
 		ctx.strokeStyle="black";
@@ -29,7 +31,7 @@ upperPaddle = function (ctx)
 		ctx.rect(this.x,this.y,this.width, this.height);
 		ctx.closePath();
 		ctx.fill();
-		ctx.stroke();	
+		ctx.stroke();	*/
 	}
 	
 	this.update=function(movement)
