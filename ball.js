@@ -7,6 +7,8 @@ ball=function(ctx)
 	var dx=5;
 	var dy=5;
 	
+	var rot=0;
+	
 	var ballObj= new Image();
 	this.draw=function (ctx)
 	{
@@ -30,8 +32,17 @@ ball=function(ctx)
 			this.y=dy+this.y;
 		}
 		//console.log("this is x val:"+dx);
+		
 		ballObj.src="ball.jpg";
+		ctx.save();
+		ctx.translate((ballObj.width * 0.5)+this.x, (ballObj.height * 0.5)+(this.y-16));
+		ctx.rotate(DegToRad(rot));
+		ctx.translate((-ballObj.width * 0.5)-this.x, (-ballObj.height * 0.5)-(this.y-16));
 		ctx.drawImage(ballObj,this.x,this.y-16);
+		ctx.restore();
+		
+		rot++;
+		
 		/*ctx.fillStyle="red";
 		ctx.strokeStyle="black";
 		ctx.beginPath();
@@ -39,6 +50,7 @@ ball=function(ctx)
 		ctx.fill();
 		ctx.closePath();*/
 	}
+
 	
 	this.ballCovertion=function(pos,side)
 	{
@@ -92,5 +104,12 @@ ball=function(ctx)
 		//dx=-dx;
 		//dy=-dy;
 	}
+}
+
+
+function DegToRad(degree)
+{
+	//return degree * 0.0174532925199432957;
+	return degree * 0.25;
 }
 
